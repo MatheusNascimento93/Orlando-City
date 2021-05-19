@@ -172,5 +172,35 @@ header #logotipo {
 	color: #fff;
 	font-family: "OpenSans";
 	font-weight: bold;
-
+}
+#news {
+	position: relative;
+	top: -110px;
+}
+#news h2 {
+	color: #5e2799;
+	font-family: "openSans-Light";
+	font-size: 48px;
+	text-transform: uppercase;
+	text-align: center;
+}
+#news hr {
+	border: #FDE192 solid 2px;
+	width: 200px;
+	margin: 0 auto;
+}
+#news .thumbnails{
+	margin-top: 20px;
+}
+#news .thumbnails h3{
+	color: #5E299A;
+	font-size: 18px;
+	font-family: "OpenSans";
+	font-weight: bold;
+	margin-bottom: 0px;
+}
+#news .thumbnails time{
+	color: #a7a7a7;
+	font-size: 18px;
+	font-family: "OpenSans";
 }
