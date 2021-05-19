@@ -204,3 +204,21 @@ header #logotipo {
 	font-size: 18px;
 	font-family: "OpenSans";
 }
+#estatisticas{
+	background-color: #5E299a;
+	width: 100%;
+	height: 200px;
+	text-align: center;
+}
+#estatisticas p{
+	color: #FED092;
+	text-transform: uppercase;
+	font-family: "OpenSans-Light";
+	font-size: 64px;
+	margin-top: 36px;
+}
+#estatisticas p small{
+	color: #FFF;
+	font-size: 24px;
+	display: block;
+}
