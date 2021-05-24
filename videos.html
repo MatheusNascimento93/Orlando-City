@@ -3,11 +3,14 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Orlando City</title>
 	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="lib/plyr/dist/plyr.css">
 	<link rel="stylesheet" href="lib/owl.carousel/owl-carousel/owl.carousel.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/orlando.css">
+	<link rel="stylesheet" href="css/orlando-mobile.css">
 </head>
 
 <body>
@@ -91,8 +94,9 @@
 				</div>
 
 				<div class="row">
-
-					<video src="mp4/highlights.mp4" controls poster="img/highlights.jpg"></video>
+					<div class="player">
+						<video src="mp4/highlights.mp4" controls poster="img/highlights.jpg"></video>
+					</div>
 
 					<input type="range" id="volume" min="0" max="1" step="0.01" value="1">
 
@@ -251,9 +255,24 @@
 	</footer>
 
 	<script src="lib/jquery/jquery.min.js"></script>
+	<script src="lib/plyr/dist/plyr.js"></script>
 	<script src="lib/owl.carousel/owl-carousel/owl.carousel.min.js"></script>
 	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
 	<script src="js/efeitos.js"></script>
+	<script>
+		(function (d, p) {
+			var a = new XMLHttpRequest(),
+				b = d.body;
+			a.open("GET", p, true);
+			a.send();
+			a.onload = function () {
+				var c = d.createElement("div");
+				c.style.display = "none";
+				c.innerHTML = a.responseText;
+				b.insertBefore(c, b.childNodes[0]);
+			}
+		})(document, "lib/plyr/dist/sprite.svg");
+	</script>
 	<script>
 		$(function () {
 
@@ -289,7 +308,7 @@
 				$(this).toggleClass("btn-success btn-danger");
 
 			});
-
+			plyr.setup();
 		});
 	</script>
 
