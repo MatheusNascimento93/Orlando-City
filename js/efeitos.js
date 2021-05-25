@@ -34,4 +34,10 @@ $(document).ready(function () {
 		owl.next();
 
 	});
-})
+	$("#page-up").on("click", function (event) {
+		$("body").animate({
+			scrollTop: 0
+		}, 1000);
+		event.preventDefault();
+	});
+});

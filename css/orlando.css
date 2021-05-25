@@ -393,3 +393,6 @@ video {
 #btn-bars, #btn-search, #btn-news-prev, #btn-news-next {
 	display: none;
 }
+.page-up{
+	display: none!important;
+}
