@@ -33,4 +33,5 @@ $(document).ready(function () {
 	$("#btn-news-next").on("click", function () {
 		owl.next();
 
-	}
+	});
+})
