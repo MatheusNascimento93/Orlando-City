@@ -22,6 +22,12 @@ $app->get(
        require_once("views/videos.php");
     }
 );
+$app->get(
+    '/shop',
+    function () {
+       require_once("views/shop.php");
+    }
+);
 
 
 $app->run();
